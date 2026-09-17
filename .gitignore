@@ -1,0 +1,14 @@
+# Rust build artifacts
+src/target/
+target/
+
+# Scan output CSV files (large, not for repo)
+data/*.csv
+data/grpc_v3_*.csv
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp

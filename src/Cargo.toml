@@ -1,0 +1,28 @@
+[package]
+name = "grpc-probe"
+version = "0.3.0"
+edition = "2021"
+authors = ["Biplab Kumar Das"]
+description = "Internet-wide gRPC security scanner - v0.3 (h2 HPACK fix)"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std"] }
+tokio-rustls = "0.26"
+webpki-roots = "0.26"
+h2 = "0.4"
+http = "1"
+bytes = "1"
+clap = { version = "4", features = ["derive"] }
+csv = "1.3"
+serde = { version = "1", features = ["derive"] }
+chrono = "0.4"
+hickory-resolver = "0.24"
+futures = "0.3"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+x509-parser = "0.16"
+
+[[bin]]
+name = "grpc-probe"
+path = "main.rs"
